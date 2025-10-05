@@ -1,90 +1,34 @@
-name: Release
-
-on:
-  push:
-    tags:
-      - 'v*'
-
-env:
-  CARGO_TERM_COLOR: always
-
-jobs:
-  create-release:
-    name: Create Release
-    runs-on: ubuntu-latest
-    outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
-    steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-  build-release:
-    name: Build Release
-    needs: create-release
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: ubuntu-latest
-            target: x86_64-unknown-linux-gnu
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-linux-amd64
-          - os: ubuntu-latest
-            target: x86_64-unknown-linux-musl
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-linux-musl-amd64
-          - os: macos-latest
-            target: x86_64-apple-darwin
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-macos-amd64
-          - os: macos-latest
-            target: aarch64-apple-darwin
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-macos-arm64
-          - os: windows-latest
-            target: x86_64-pc-windows-msvc
-            artifact_name: cloud-ping-rs.exe
-            asset_name: cloud-ping-rs-windows-amd64.exe
-
-    steps:
-      - uses: actions/checkout@v4
-      
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: ${{ matrix.target }}
-      
-      - uses: Swatinem/rust-cache@v2
-      
-      - name: Build
-        run: cargo build --release --target ${{ matrix.target }}
-      
-      - name: Strip binary (Linux/macOS)
-        if: matrix.os != 'windows-latest'
-        run: strip target/${{ matrix.target }}/release/${{ matrix.artifact_name }}
-      
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: target/${{ matrix.target }}/release/${{ matrix.artifact_name }}
-          asset_name: ${{ matrix.asset_name }}
-          asset_content_type: application/octet-stream
-
-  publish-crate:
-    name: Publish to crates.io
-    needs: build-release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - run: cargo publish --token ${{ secrets.CARGO_TOKEN }}
+            - name: Rust Release binary
+  # You may pin to the exact commit or the version.
+  # uses: rust-build/rust-build.action@6febf1b0ed6499a46610b58ef9d810398e75f3c2
+  uses: rust-build/rust-build.action@v1.4.5
+  with:
+    # Output target
+    RUSTTARGET: 
+    # List of extra files to include in build
+    EXTRA_FILES: # optional
+    # Path to directory containing Cargo.toml (defaults to project root)
+    SRC_DIR: # optional
+    # List of archive types to publish the binaries with, default "zip", supports zip and all tar formats
+    ARCHIVE_TYPES: # optional
+    # Full name of archive to upload (you must specify file extension and change this if building multiple targets)
+    ARCHIVE_NAME: # optional
+    # Relative path of script to run before building
+    PRE_BUILD: # optional
+    # Relative path of script to run after building
+    POST_BUILD: # optional
+    # If set to "true", the resulting binary will be stripped and compressed by UPX. ("false" by default)
+    MINIFY: # optional
+    # The rust toolchain version to use (see https://rust-lang.github.io/rustup/concepts/toolchains.html#toolchain-specification)
+    TOOLCHAIN_VERSION: # optional
+    # What method to use to upload compiled binaries, supported values: (release, none), default: release
+    UPLOAD_MODE: # optional
+    # Whether to statically link dependencies
+    STATIC_LINKING: # optional
+    # Extra flags to give to cargo build (space separated)
+    EXTRA_COMMAND_FLAGS: # optional
+    # Extra features to enable for the build
+    EXTRA_FEATURES: # optional
+    # Features to enable for the build (implies --no-default-features)
+    FEATURES: # optional
+          

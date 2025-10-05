@@ -1,4 +1,4 @@
-# Cloud Ping RS 🚀
+# Cloud Ping 🚀
 
 > A production-ready, high-performance network latency testing and monitoring utility built in Rust
 
@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
-Cloud Ping RS is a comprehensive network performance testing tool designed for developers, DevOps engineers, and network administrators. It provides real-time monitoring, intelligent scoring, and detailed analytics for cloud infrastructure endpoints across multiple providers.
+Cloud Ping is a comprehensive network performance testing tool designed for developers, DevOps engineers, and network administrators. It provides real-time monitoring, intelligent scoring, and detailed analytics for cloud infrastructure endpoints across multiple providers.
 
 ## 📋 Table of Contents
 
@@ -519,7 +519,7 @@ For now, you can customize the endpoints by modifying the `data.json` file direc
 
 ### Configuration Hierarchy
 
-Cloud Ping RS uses a three-tier configuration system with the following precedence (highest to lowest):
+Cloud Ping uses a three-tier configuration system with the following precedence (highest to lowest):
 
 1. **Command-line arguments** - Override everything
 2. **Environment variables** - Override config file and defaults
@@ -540,7 +540,7 @@ Default configuration file paths by platform:
 
 ```toml
 # ============================================
-# Cloud Ping RS Configuration File
+# Cloud Ping Configuration File
 # ============================================
 
 # Network Settings
@@ -718,7 +718,7 @@ Planned output formats for future versions include:
 Beautiful, human-readable output with colors and formatting:
 
 ```
-🌐 Cloud Ping RS - Network Quality Assessment
+🌐 Cloud Ping - Network Quality Assessment
 ==============================================
 
 Testing 50 regions across 5 providers...
@@ -910,7 +910,7 @@ cloud-ping benchmark --format json --no-progress | jq '.results[] | select(.scor
 
 ### System Overview
 
-Cloud Ping RS is built with a modular, layered architecture optimized for performance and maintainability:
+Cloud Ping is built with a modular, layered architecture optimized for performance and maintainability:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -1500,7 +1500,7 @@ cargo publish
 
 ### Overview
 
-Cloud Ping RS uses a sophisticated, deterministic scoring algorithm that evaluates network performance across multiple dimensions. The algorithm produces scores from 0-100 and assigns letter grades (A+ to F).
+Cloud Ping uses a sophisticated, deterministic scoring algorithm that evaluates network performance across multiple dimensions. The algorithm produces scores from 0-100 and assigns letter grades (A+ to F).
 
 ### Scoring Components
 
@@ -1620,7 +1620,7 @@ Letter grades are assigned based on the overall score:
 
 ### Application Suitability Scores
 
-In addition to the overall score, Cloud Ping RS calculates application-specific suitability scores:
+In addition to the overall score, Cloud Ping calculates application-specific suitability scores:
 
 #### Gaming Suitability
 ```
@@ -1729,7 +1729,7 @@ availability = 0.05
 
 ### Region Data Structure
 
-Cloud Ping RS reads cloud provider and region data from JSON files. The default file is `data.json`, but you can specify custom files using the `--data-file` option.
+Cloud Ping reads cloud provider and region data from JSON files. The default file is `data.json`, but you can specify custom files using the `--data-file` option.
 
 ### JSON Schema
 
@@ -1958,7 +1958,7 @@ cloud-ping --data-file my-endpoints.json list
 
 ### Benchmarks
 
-Cloud Ping RS is designed for high performance with minimal resource usage:
+Cloud Ping is designed for high performance with minimal resource usage:
 
 | Metric | Value | Notes |
 |--------|-------|-------|
@@ -2192,7 +2192,7 @@ When reporting issues, include:
 # Rust version
 rustc --version
 
-# Cloud Ping RS version
+# Cloud Ping version
 cloud-ping --version
 
 # Operating system
@@ -2205,7 +2205,7 @@ cloud-ping config --show
 
 ## 🤝 Contributing
 
-We welcome contributions! Cloud Ping RS is an open-source project and we appreciate help from the community.
+We welcome contributions! Cloud Ping is an open-source project and we appreciate help from the community.
 
 ### Ways to Contribute
 
@@ -2305,34 +2305,10 @@ mod tests {
 - Focus on constructive feedback
 - Assume good intentions
 - Help others learn and grow
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### MIT License Summary
-
-```
-Copyright (c) 2024 Cloud Ping Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-```
-
+- 
 ## 🙏 Acknowledgments
 
-Cloud Ping RS is built on the shoulders of giants. We're grateful to the Rust community and the maintainers of these excellent crates:
+Cloud Ping is built on the shoulders of giants. We're grateful to the Rust community and the maintainers of these excellent crates:
 
 ### Core Dependencies
 
@@ -2460,7 +2436,7 @@ Cloud Ping RS is built on the shoulders of giants. We're grateful to the Rust co
 
 ## 🌟 Star History
 
-If you find Cloud Ping RS useful, please consider giving it a star on GitHub! ⭐
+If you find Cloud Ping useful, please consider giving it a star on GitHub! ⭐
 
 ## 📞 Contact & Support
 
@@ -2468,13 +2444,3 @@ If you find Cloud Ping RS useful, please consider giving it a star on GitHub! �
 - **Discussions:** [GitHub Discussions](https://github.com/example/cloud-ping/discussions)
 
 ---
-
-<div align="center">
-
-**Cloud Ping RS** - Making network performance testing fast, reliable, and beautiful. 🚀
-
-Built with ❤️ using Rust
-
-[⬆ Back to Top](#cloud-ping)
-
-</div>

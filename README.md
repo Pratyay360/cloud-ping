@@ -2444,3 +2444,14 @@ If you find Cloud Ping useful, please consider giving it a star on GitHub! ⭐
 - **Discussions:** [GitHub Discussions](https://github.com/example/cloud-ping/discussions)
 
 ---
+**References**
+
+1. K. T. Chen, P. Huang, G. S. Wang, C.-Y. Huang, and C. L. Lei, “On the sensitivity of online game playing time to network QoS,” *Proceedings of IEEE INFOCOM 2006*, 2006, pp. 1–12. DOI: [10.1109/INFOCOM.2006.286](https://doi.org/10.1109/INFOCOM.2006.286).
+
+2. M. Fiedler, T. Hossfeld, and P. Tran-Gia, “Packet-E-Model: E-Model for VoIP quality evaluation,” *Computer Networks*, vol. 49, no. 3, pp. 366–381, 2005. DOI: [10.1016/j.comnet.2005.10.008](https://doi.org/10.1016/j.comnet.2005.10.008).
+
+3. M. Di Mauro and A. Liotta, “An experimental evaluation and characterization of VoIP over an LTE-A network,” *arXiv preprint*, 2020. Available at: [https://arxiv.org/abs/2009.12580](https://arxiv.org/abs/2009.12580).
+
+4. M. H. Miraz, S. A. Molvi, M. A. Ganie, M. Ali, and A. H. Hussein, “Simulation and Analysis of Quality of Service (QoS) Parameters of Voice over IP (VoIP) Traffic through Heterogeneous Networks,” *arXiv preprint*, 2017. Available at: [https://arxiv.org/abs/1708.01572](https://arxiv.org/abs/1708.01572).
+
+5. T. Mäki, T. Väre, and J. Vehkaperä, “On-the-fly VoIP call quality evaluation with improved E-model,” *Proceedings of the ACM*, 2013. DOI: [10.1145/2512840.2512860](https://doi.org/10.1145/2512840.2512860).

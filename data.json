@@ -1,0 +1,1390 @@
+{
+  "Major Cloud Providers": {
+    "Alibaba Cloud": {
+      "regions": [
+        {
+          "name": "Germany (Frankfurt)",
+          "url": "https://oss-eu-central-1.aliyuncs.com"
+        },
+        {
+          "name": "Indonesia (Jakarta)",
+          "url": "https://oss-ap-southeast-5.aliyuncs.com"
+        },
+        {
+          "name": "Japan (Tokyo)",
+          "url": "https://oss-ap-northeast-1.aliyuncs.com"
+        },
+        {
+          "name": "Singapore",
+          "url": "https://oss-ap-southeast-1.aliyuncs.com"
+        },
+        {
+          "name": "UK (London)",
+          "url": "https://oss-eu-west-1.aliyuncs.com"
+        },
+        {
+          "name": "US East (Virginia)",
+          "url": "https://oss-us-east-1.aliyuncs.com"
+        },
+        {
+          "name": "US West (Silicon Valley)",
+          "url": "https://oss-us-west-1.aliyuncs.com"
+        }
+      ]
+    },
+    "Amazon Web Services": {
+      "regions": [
+        {
+          "name": "af-south-1 (Cape Town)",
+          "url": "https://dynamodb.af-south-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-east-1 (Hong Kong)",
+          "url": "https://dynamodb.ap-east-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-east-2 (Taipei)",
+          "url": "https://dynamodb.ap-east-2.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-northeast-1 (Tokyo)",
+          "url": "https://dynamodb.ap-northeast-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-northeast-2 (Seoul)",
+          "url": "https://dynamodb.ap-northeast-2.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-northeast-3 (Osaka)",
+          "url": "https://dynamodb.ap-northeast-3.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-south-1 (Mumbai)",
+          "url": "https://dynamodb.ap-south-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-south-2 (Hyderabad)",
+          "url": "https://dynamodb.ap-south-2.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-southeast-1 (Singapore)",
+          "url": "https://dynamodb.ap-southeast-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-southeast-2 (Sydney)",
+          "url": "https://dynamodb.ap-southeast-2.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-southeast-3 (Jakarta)",
+          "url": "https://dynamodb.ap-southeast-3.amazonaws.com/ping"
+        },
+        {
+          "name": "ap-southeast-4 (Melbourne)",
+          "url": "https://dynamodb.ap-southeast-4.amazonaws.com/ping"
+        },
+        {
+          "name": "ca-central-1 (Canada Central)",
+          "url": "https://dynamodb.ca-central-1.amazonaws.com/ping"
+        },
+        {
+          "name": "ca-west-1 (Canada West)",
+          "url": "https://dynamodb.ca-west-1.amazonaws.com/ping"
+        },
+        {
+          "name": "cn-north-1 (Beijing)",
+          "url": "https://dynamodb.cn-north-1.amazonaws.com.cn/ping"
+        },
+        {
+          "name": "cn-northwest-1 (Ningxia)",
+          "url": "https://dynamodb.cn-northwest-1.amazonaws.com.cn/ping"
+        },
+        {
+          "name": "eu-central-1 (Frankfurt)",
+          "url": "https://dynamodb.eu-central-1.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-central-2 (Zurich)",
+          "url": "https://dynamodb.eu-central-2.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-north-1 (Stockholm)",
+          "url": "https://dynamodb.eu-north-1.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-south-1 (Milan)",
+          "url": "https://dynamodb.eu-south-1.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-south-2 (Spain)",
+          "url": "https://dynamodb.eu-south-2.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-west-1 (Ireland)",
+          "url": "https://dynamodb.eu-west-1.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-west-2 (London)",
+          "url": "https://dynamodb.eu-west-2.amazonaws.com/ping"
+        },
+        {
+          "name": "eu-west-3 (Paris)",
+          "url": "https://dynamodb.eu-west-3.amazonaws.com/ping"
+        },
+        {
+          "name": "il-central-1 (Israel)",
+          "url": "https://dynamodb.il-central-1.amazonaws.com/ping"
+        },
+        {
+          "name": "me-central-1 (UAE)",
+          "url": "https://streams.dynamodb.me-central-1.amazonaws.com/ping"
+        },
+        {
+          "name": "me-south-1 (Bahrain)",
+          "url": "https://dynamodb.me-south-1.amazonaws.com/ping"
+        },
+        {
+          "name": "mx-central-1 (Mexico)",
+          "url": "https://dynamodb.mx-central-1.amazonaws.com/ping"
+        },
+        {
+          "name": "sa-east-1 (São Paulo)",
+          "url": "https://dynamodb.sa-east-1.amazonaws.com/ping"
+        },
+        {
+          "name": "us-east-1 (Virginia)",
+          "url": "https://dynamodb.us-east-1.amazonaws.com/ping"
+        },
+        {
+          "name": "us-east-2 (Ohio)",
+          "url": "https://dynamodb.us-east-2.amazonaws.com/ping"
+        },
+        {
+          "name": "us-gov-east-1",
+          "url": "https://dynamodb.us-gov-east-1.amazonaws.com/ping"
+        },
+        {
+          "name": "us-gov-west-1",
+          "url": "https://dynamodb.us-gov-west-1.amazonaws.com/ping"
+        },
+        {
+          "name": "us-west-1 (California)",
+          "url": "https://dynamodb.us-west-1.amazonaws.com/ping"
+        },
+        {
+          "name": "us-west-2 (Oregon)",
+          "url": "https://dynamodb.us-west-2.amazonaws.com/ping"
+        }
+      ]
+    },
+    "Azure": {
+      "regions": [
+        {
+          "name": "Australia Central (Australia)",
+          "url": "https://s8australiacentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Australia East (Australia)",
+          "url": "https://s8australiaeast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Australia Southeast (Australia)",
+          "url": "https://s8australiasoutheast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Central India (India)",
+          "url": "https://s8centralindia.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "East Asia (Asia Pacific)",
+          "url": "https://s8eastasia.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Indonesia Central (Indonesia)",
+          "url": "https://s8indonesiacentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Japan East (Japan)",
+          "url": "https://s8japaneast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Japan West (Japan)",
+          "url": "https://s8japanwest.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Korea Central (Korea)",
+          "url": "https://s8koreacentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Korea South (Korea)",
+          "url": "https://s8koreasouth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Malaysia West (Malaysia)",
+          "url": "https://s8malaysiawest.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "New Zealand North (New Zealand)",
+          "url": "https://s8newzealandnorth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "South India (India)",
+          "url": "https://s8southindia.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Southeast Asia (Asia Pacific)",
+          "url": "https://s8southeastasia.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West India (India)",
+          "url": "https://s8westindia.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Austria East (Austria)",
+          "url": "https://s8austriaeast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "France Central (France)",
+          "url": "https://s8francecentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Germany West Central (Germany)",
+          "url": "https://s8germanywestcentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Italy North (Italy)",
+          "url": "https://s8italynorth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "North Europe (Europe)",
+          "url": "https://s8northeurope.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Norway East (Norway)",
+          "url": "https://s8norwayeast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Poland Central (Poland)",
+          "url": "https://s8polandcentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Spain Central (Spain)",
+          "url": "https://s8spaincentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Sweden Central (Sweden)",
+          "url": "https://s8swedencentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Switzerland North (Switzerland)",
+          "url": "https://s8switzerlandnorth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "UK South (United Kingdom)",
+          "url": "https://s8uksouth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "UK West (United Kingdom)",
+          "url": "https://s8ukwest.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West Europe (Europe)",
+          "url": "https://s8westeurope.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Central US (United States)",
+          "url": "https://s8centralus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "East US (United States)",
+          "url": "https://s8eastus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "East US 2 (United States)",
+          "url": "https://s8eastus2.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "North Central US (United States)",
+          "url": "https://s8northcentralus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "South Central US (United States)",
+          "url": "https://s8southcentralus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West Central US (United States)",
+          "url": "https://s8westcentralus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West US (United States)",
+          "url": "https://s8westus.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West US 2 (United States)",
+          "url": "https://s8westus2.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "West US 3 (United States)",
+          "url": "https://s8westus3.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Israel Central (Israel)",
+          "url": "https://s8israelcentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Qatar Central (Qatar)",
+          "url": "https://s8qatarcentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "UAE North (United Arab Emirates)",
+          "url": "https://s8uaenorth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Brazil South (Brazil)",
+          "url": "https://s8brazilsouth.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Chile Central (Chile)",
+          "url": "https://s8chilecentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Canada Central (Canada)",
+          "url": "https://s8canadacentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Canada East (Canada)",
+          "url": "https://s8canadaeast.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "Mexico Central (Mexico)",
+          "url": "https://s8mexicocentral.blob.core.windows.net/public/latency-test.json"
+        },
+        {
+          "name": "South Africa North (Africa)",
+          "url": "https://s8southafricanorth.blob.core.windows.net/public/latency-test.json"
+        }
+      ]
+    },
+    "Google Cloud Platform": {
+      "regions": [
+        {
+          "name": "africa-south1 (Johannesburg)",
+          "url": "https://africa-south1-5tkroniexa-bq.a.run.app/ping"
+        },
+        {
+          "name": "asia-east1 (Taiwan)",
+          "url": "https://asia-east1-5tkroniexa-de.a.run.app/ping"
+        },
+        {
+          "name": "asia-east2 (Hong Kong)",
+          "url": "https://asia-east2-5tkroniexa-df.a.run.app/ping"
+        },
+        {
+          "name": "asia-northeast1 (Tokyo)",
+          "url": "https://asia-northeast1-5tkroniexa-an.a.run.app/ping"
+        },
+        {
+          "name": "asia-northeast2 (Osaka)",
+          "url": "https://asia-northeast2-5tkroniexa-dt.a.run.app/ping"
+        },
+        {
+          "name": "asia-northeast3 (Seoul)",
+          "url": "https://asia-northeast3-5tkroniexa-du.a.run.app/ping"
+        },
+        {
+          "name": "asia-south1 (Mumbai)",
+          "url": "https://asia-south1-5tkroniexa-el.a.run.app/ping"
+        },
+        {
+          "name": "asia-south2 (Delhi)",
+          "url": "https://asia-south2-5tkroniexa-em.a.run.app/ping"
+        },
+        {
+          "name": "asia-southeast1 (Singapore)",
+          "url": "https://asia-southeast1-5tkroniexa-as.a.run.app/ping"
+        },
+        {
+          "name": "asia-southeast2 (Jakarta)",
+          "url": "https://asia-southeast2-5tkroniexa-et.a.run.app/ping"
+        },
+        {
+          "name": "australia-southeast1 (Sydney)",
+          "url": "https://australia-southeast1-5tkroniexa-ts.a.run.app/ping"
+        },
+        {
+          "name": "australia-southeast2 (Melbourne)",
+          "url": "https://australia-southeast2-5tkroniexa-km.a.run.app/ping"
+        },
+        {
+          "name": "europe-central2 (Warsaw)",
+          "url": "https://europe-central2-5tkroniexa-lm.a.run.app/ping"
+        },
+        {
+          "name": "europe-north1 (Finland)",
+          "url": "https://europe-north1-5tkroniexa-lz.a.run.app/ping"
+        },
+        {
+          "name": "europe-southwest1 (Madrid)",
+          "url": "https://europe-southwest1-5tkroniexa-no.a.run.app/ping"
+        },
+        {
+          "name": "europe-west1 (Belgium)",
+          "url": "https://europe-west1-5tkroniexa-ew.a.run.app/ping"
+        },
+        {
+          "name": "europe-west10 (Berlin)",
+          "url": "https://europe-west10-5tkroniexa-oe.a.run.app/ping"
+        },
+        {
+          "name": "europe-west12 (Turin)",
+          "url": "https://europe-west12-5tkroniexa-og.a.run.app/ping"
+        },
+        {
+          "name": "europe-west2 (London)",
+          "url": "https://europe-west2-5tkroniexa-nw.a.run.app/ping"
+        },
+        {
+          "name": "europe-west3 (Frankfurt)",
+          "url": "https://europe-west3-5tkroniexa-ey.a.run.app/ping"
+        },
+        {
+          "name": "europe-west4 (Netherlands)",
+          "url": "https://europe-west4-5tkroniexa-ez.a.run.app/ping"
+        },
+        {
+          "name": "europe-west6 (Zurich)",
+          "url": "https://europe-west6-5tkroniexa-oa.a.run.app/ping"
+        },
+        {
+          "name": "europe-west8 (Milan)",
+          "url": "https://europe-west8-5tkroniexa-oc.a.run.app/ping"
+        },
+        {
+          "name": "europe-west9 (Paris)",
+          "url": "https://europe-west9-5tkroniexa-od.a.run.app/ping"
+        },
+        {
+          "name": "global (Global External HTTPS Load Balancer)",
+          "url": "https://global.gcping.com/ping"
+        },
+        {
+          "name": "me-central1 (Doha)",
+          "url": "https://me-central1-5tkroniexa-ww.a.run.app/ping"
+        },
+        {
+          "name": "me-central2 (Saudi Arabia)",
+          "url": "https://me-central2-5tkroniexa-wx.a.run.app/ping"
+        },
+        {
+          "name": "me-west1 (Israel)",
+          "url": "https://me-west1-5tkroniexa-zf.a.run.app/ping"
+        },
+        {
+          "name": "northamerica-northeast1 (Montréal)",
+          "url": "https://northamerica-northeast1-5tkroniexa-nn.a.run.app/ping"
+        },
+        {
+          "name": "northamerica-northeast2 (Toronto)",
+          "url": "https://northamerica-northeast2-5tkroniexa-pd.a.run.app/ping"
+        },
+        {
+          "name": "southamerica-east1 (São Paulo)",
+          "url": "https://southamerica-east1-5tkroniexa-rj.a.run.app/ping"
+        },
+        {
+          "name": "southamerica-west1 (Santiago)",
+          "url": "https://southamerica-west1-5tkroniexa-tl.a.run.app/ping"
+        },
+        {
+          "name": "us-central1 (Iowa)",
+          "url": "https://us-central1-5tkroniexa-uc.a.run.app/ping"
+        },
+        {
+          "name": "us-east1 (South Carolina)",
+          "url": "https://us-east1-5tkroniexa-ue.a.run.app/ping"
+        },
+        {
+          "name": "us-east4 (North Virginia)",
+          "url": "https://us-east4-5tkroniexa-uk.a.run.app/ping"
+        },
+        {
+          "name": "us-east5 (Columbus)",
+          "url": "https://us-east5-5tkroniexa-ul.a.run.app/ping"
+        },
+        {
+          "name": "us-south1 (Dallas)",
+          "url": "https://us-south1-5tkroniexa-vp.a.run.app/ping"
+        },
+        {
+          "name": "us-west1 (Oregon)",
+          "url": "https://us-west1-5tkroniexa-uw.a.run.app/ping"
+        },
+        {
+          "name": "us-west2 (Los Angeles)",
+          "url": "https://us-west2-5tkroniexa-wl.a.run.app/ping"
+        },
+        {
+          "name": "us-west3 (Salt Lake City)",
+          "url": "https://us-west3-5tkroniexa-wm.a.run.app/ping"
+        },
+        {
+          "name": "us-west4 (Las Vegas)",
+          "url": "https://us-west4-5tkroniexa-wn.a.run.app/ping"
+        }
+      ]
+    },
+    "IBM Cloud": {
+      "regions": [
+        {
+          "name": "Dallas (Americas)",
+          "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Sao Paulo (Americas)",
+          "url": "https://s3.br-sao.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Toronto (Americas)",
+          "url": "https://s3.ca-tor.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Washington DC (Americas)",
+          "url": "https://s3.us-east.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Frankfurt (Europe)",
+          "url": "https://s3.eu-de.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "London (Europe)",
+          "url": "https://s3.eu-gb.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Madrid (Europe)",
+          "url": "https://s3.eu-es.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Sydney (Asia Pacific)",
+          "url": "https://s3.au-syd.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Tokyo (Asia Pacific)",
+          "url": "https://s3.jp-tok.cloud-object-storage.appdomain.cloud/"
+        },
+        {
+          "name": "Osaka (Asia Pacific)",
+          "url": "https://s3.jp-osa.cloud-object-storage.appdomain.cloud/"
+        }
+      ]
+    },
+    "Oracle Cloud": {
+      "regions": [
+        {
+          "name": "Sydney (Australia East)",
+          "url": "https://objectstorage.ap-sydney-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Melbourne (Australia Southeast)",
+          "url": "https://objectstorage.ap-melbourne-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Sao Paulo (Brazil East)",
+          "url": "https://objectstorage.sa-saopaulo-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Vinhedo (Brazil Southeast)",
+          "url": "https://objectstorage.sa-vinhedo-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Montreal (Canada Southeast)",
+          "url": "https://objectstorage.ca-montreal-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Toronto (Canada Southeast)",
+          "url": "https://objectstorage.ca-toronto-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Santiago (Chile Central)",
+          "url": "https://objectstorage.sa-santiago-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Valparaiso (Chile West)",
+          "url": "https://objectstorage.sa-valparaiso-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Bogota (Colombia Central)",
+          "url": "https://objectstorage.sa-bogota-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Paris (France Central)",
+          "url": "https://objectstorage.eu-paris-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Marseille (France South)",
+          "url": "https://objectstorage.eu-marseille-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Frankfurt (Germany Central)",
+          "url": "https://objectstorage.eu-frankfurt-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Hyderabad (India South)",
+          "url": "https://objectstorage.ap-hyderabad-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Mumbai (India West)",
+          "url": "https://objectstorage.ap-mumbai-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Batam (Indonesia North)",
+          "url": "https://objectstorage.ap-batam-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Jerusalem (Israel Central)",
+          "url": "https://objectstorage.il-jerusalem-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Milan (Italy Northwest)",
+          "url": "https://objectstorage.eu-milan-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Osaka (Japan Central)",
+          "url": "https://objectstorage.ap-osaka-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Tokyo (Japan East)",
+          "url": "https://objectstorage.ap-tokyo-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Queretaro (Mexico Central)",
+          "url": "https://objectstorage.mx-queretaro-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Monterrey (Mexico Northeast)",
+          "url": "https://objectstorage.mx-monterrey-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Amsterdam (Netherlands Northwest)",
+          "url": "https://objectstorage.eu-amsterdam-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Riyadh (Saudi Arabia Central)",
+          "url": "https://objectstorage.me-riyadh-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Jeddah (Saudi Arabia West)",
+          "url": "https://objectstorage.me-jeddah-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Jovanovac (Serbia Central)",
+          "url": "https://ocir.eu-jovanovac-1.oci.oraclecloud20.com/ping"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://objectstorage.ap-singapore-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Singapore West (Singapore)",
+          "url": "https://objectstorage.ap-singapore-2.oraclecloud.com/ping"
+        },
+        {
+          "name": "Johannesburg (South Africa Central)",
+          "url": "https://objectstorage.af-johannesburg-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Seoul (South Korea Central)",
+          "url": "https://objectstorage.ap-seoul-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Chuncheon (South Korea North)",
+          "url": "https://objectstorage.ap-chuncheon-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Madrid (Spain Central)",
+          "url": "https://objectstorage.eu-madrid-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Stockholm (Sweden Central)",
+          "url": "https://objectstorage.eu-stockholm-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Zurich (Switzerland North)",
+          "url": "https://objectstorage.eu-zurich-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Abu Dhabi (UAE Central)",
+          "url": "https://objectstorage.me-abudhabi-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Dubai (UAE East)",
+          "url": "https://objectstorage.me-dubai-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "London (UK South)",
+          "url": "https://objectstorage.uk-london-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Newport (UK West)",
+          "url": "https://objectstorage.uk-cardiff-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Ashburn (US East)",
+          "url": "https://objectstorage.us-ashburn-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Chicago (US Midwest)",
+          "url": "https://objectstorage.us-chicago-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "Phoenix (US West)",
+          "url": "https://objectstorage.us-phoenix-1.oraclecloud.com/ping"
+        },
+        {
+          "name": "San Jose (US West)",
+          "url": "https://objectstorage.us-sanjose-1.oraclecloud.com/ping"
+        }
+      ]
+    },
+    "Tencent Cloud": {
+      "regions": [
+        {
+          "name": "Germany (Frankfurt)",
+          "url": "https://cos.eu-frankfurt.myqcloud.com"
+        },
+        {
+          "name": "Japan (Tokyo)",
+          "url": "https://cos.ap-tokyo.myqcloud.com"
+        },
+        {
+          "name": "Singapore",
+          "url": "https://cos.ap-singapore.myqcloud.com"
+        },
+        {
+          "name": "South Korea (Seoul)",
+          "url": "https://cos.ap-seoul.myqcloud.com"
+        },
+        {
+          "name": "Thailand (Bangkok)",
+          "url": "https://cos.ap-bangkok.myqcloud.com"
+        },
+        {
+          "name": "US West (Silicon Valley)",
+          "url": "https://cos.na-siliconvalley.myqcloud.com"
+        }
+      ]
+    }
+  },
+  "Other Cloud & VPS Providers": {
+    "Backblaze": {
+      "regions": [
+        {
+          "name": "EU Central (Amsterdam)",
+          "url": "https://s3.eu-central-003.backblazeb2.com"
+        },
+        {
+          "name": "US West (Arizona)",
+          "url": "https://s3.us-west-001.backblazeb2.com"
+        },
+        {
+          "name": "US West (California)",
+          "url": "https://s3.us-west-000.backblazeb2.com"
+        },
+        {
+          "name": "US West (Oregon)",
+          "url": "https://s3.us-west-002.backblazeb2.com"
+        },
+        {
+          "name": "US West (Sacramento)",
+          "url": "https://s3.us-west-004.backblazeb2.com"
+        }
+      ]
+    },
+    "Contabo": {
+      "regions": [
+        {
+          "name": "St. Louis, MO (United States)",
+          "url": "https://stl.speedtest.contabo.net/"
+        },
+        {
+          "name": "Orangeburg, NY (United States)",
+          "url": "https://ony.speedtest.contabo.net/"
+        },
+        {
+          "name": "Seattle, WA (United States)",
+          "url": "https://sea.speedtest.contabo.net/"
+        },
+        {
+          "name": "New York City, NY (United States)",
+          "url": "https://nyc.speedtest.contabo.net/"
+        },
+        {
+          "name": "Portsmouth (United Kingdom)",
+          "url": "https://pme.speedtest.contabo.net/"
+        },
+        {
+          "name": "Dusseldorf (Germany)",
+          "url": "https://dus.speedtest.contabo.net/"
+        },
+        {
+          "name": "Karlsruhe (Germany)",
+          "url": "https://kae.speedtest.contabo.net/"
+        },
+        {
+          "name": "Lauterbourg (France)",
+          "url": "https://ltg.speedtest.contabo.net/"
+        },
+        {
+          "name": "Mumbai (India)",
+          "url": "https://bom.speedtest.contabo.net/"
+        },
+        {
+          "name": "Sydney (Australia)",
+          "url": "https://syd.speedtest.contabo.net/"
+        },
+        {
+          "name": "Tokyo (Japan)",
+          "url": "https://tyo.speedtest.contabo.net/"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://sin.speedtest.contabo.net/"
+        }
+      ]
+    },
+    "CoreWeave": {
+      "regions": [
+        {
+          "name": "Weehawken, NJ (US East)",
+          "url": "https://http.speedtest.lga1.coreweave.com/ping"
+        },
+        {
+          "name": "Chicago, IL (US Central)",
+          "url": "https://http.speedtest.ord1.coreweave.com/ping"
+        },
+        {
+          "name": "Las Vegas, NV (US West)",
+          "url": "https://http.speedtest.las1.coreweave.com/ping"
+        }
+      ]
+    },
+    "DigitalOcean": {
+      "regions": [
+        {
+          "name": "NYC 3 (New York City)",
+          "url": "https://nyc3.digitaloceanspaces.com/"
+        },
+        {
+          "name": "SFO 2 (San Francisco)",
+          "url": "https://sfo2.digitaloceanspaces.com/"
+        },
+        {
+          "name": "SFO 3 (San Francisco)",
+          "url": "https://sfo3.digitaloceanspaces.com/"
+        },
+        {
+          "name": "AMS 3 (Amsterdam)",
+          "url": "https://ams3.digitaloceanspaces.com/"
+        },
+        {
+          "name": "SGP 1 (Singapore)",
+          "url": "https://sgp1.digitaloceanspaces.com/"
+        },
+        {
+          "name": "LON 1 (London)",
+          "url": "https://lon1.digitaloceanspaces.com/"
+        },
+        {
+          "name": "FRA (Frankfurt)",
+          "url": "https://fra1.digitaloceanspaces.com/"
+        },
+        {
+          "name": "TOR 1 (Toronto)",
+          "url": "https://tor1.digitaloceanspaces.com/"
+        },
+        {
+          "name": "BLR (Bangalore)",
+          "url": "https://blr1.digitaloceanspaces.com/"
+        }
+      ]
+    },
+    "Gcore": {
+      "regions": [
+        {
+          "name": "Amsterdam (Netherlands)",
+          "url": "https://am3-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Buenos Aires (Argentina)",
+          "url": "https://syt-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Cairo (Egypt)",
+          "url": "https://teg-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Hong Kong (Hong Kong)",
+          "url": "https://hk2-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Istanbul (Türkiye)",
+          "url": "https://tii-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Johannesburg (South Africa)",
+          "url": "https://jp1-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Lagos (Nigeria)",
+          "url": "https://lgs-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "London (United Kingdom)",
+          "url": "https://thn2-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Los Angeles (United States)",
+          "url": "https://la2-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Mumbai (India)",
+          "url": "https://ww-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "New York (United States)",
+          "url": "https://ny2-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Paris (France)",
+          "url": "https://pa5-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Santiago de Querétaro (Mexico)",
+          "url": "https://sqr-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Seattle (United States)",
+          "url": "https://wbs-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Seoul (South Korea)",
+          "url": "https://kx-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://sg1-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Sydney (Australia)",
+          "url": "https://sy4-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "São Paulo (Brazil)",
+          "url": "https://sp3-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Tel Aviv (Israel)",
+          "url": "https://bzi-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        },
+        {
+          "name": "Tokyo (Japan)",
+          "url": "https://cc1-speedtest.tools.gcore.com/speedtest-backend/empty.php?cors=true"
+        }
+      ]
+    },
+    "Hetzner": {
+      "regions": [
+        {
+          "name": "Falkenstein (Germany)",
+          "url": "https://fsn1-speed.hetzner.com/"
+        },
+        {
+          "name": "Nuremberg (Germany)",
+          "url": "https://nbg1-speed.hetzner.com/"
+        },
+        {
+          "name": "Helsinki (Finland)",
+          "url": "https://hel1-speed.hetzner.com/"
+        },
+        {
+          "name": "Ashburn, VA (United States)",
+          "url": "https://ash-speed.hetzner.com/"
+        },
+        {
+          "name": "Hillsboro, OR (United States)",
+          "url": "https://hil-speed.hetzner.com/"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://sin-speed.hetzner.com/"
+        }
+      ]
+    },
+    "Linode": {
+      "regions": [
+        {
+          "name": "Newark (US East)",
+          "url": "https://speedtest.newark.linode.com/empty.php"
+        },
+        {
+          "name": "Dallas (US Central)",
+          "url": "https://speedtest.dallas.linode.com/empty.php"
+        },
+        {
+          "name": "Fremont (US West)",
+          "url": "https://speedtest.fremont.linode.com/empty.php"
+        },
+        {
+          "name": "Atlanta (US Southeast)",
+          "url": "https://speedtest.atlanta.linode.com/empty.php"
+        },
+        {
+          "name": "Washington (US-IAD)",
+          "url": "https://speedtest.washington.linode.com/empty.php"
+        },
+        {
+          "name": "Chicago (US-ORD)",
+          "url": "https://speedtest.chicago.linode.com/empty.php"
+        },
+        {
+          "name": "Toronto (CA Central)",
+          "url": "https://speedtest.toronto1.linode.com/empty.php"
+        },
+        {
+          "name": "London (EU West)",
+          "url": "https://speedtest.london.linode.com/empty.php"
+        },
+        {
+          "name": "Frankfurt (EU Central)",
+          "url": "https://speedtest.frankfurt.linode.com/empty.php"
+        },
+        {
+          "name": "Paris (FR-PAR)",
+          "url": "https://speedtest.paris.linode.com/empty.php"
+        },
+        {
+          "name": "Singapore (AP South)",
+          "url": "https://speedtest.singapore.linode.com/empty.php"
+        },
+        {
+          "name": "Tokyo 2 (AP Northeast-2)",
+          "url": "https://speedtest.tokyo2.linode.com/empty.php"
+        },
+        {
+          "name": "Mumbai (AP West)",
+          "url": "https://speedtest.mumbai1.linode.com/empty.php"
+        },
+        {
+          "name": "Sydney (AP-Southeast)",
+          "url": "https://speedtest.syd1.linode.com/empty.php"
+        },
+        {
+          "name": "Stockholm (SE-STO)",
+          "url": "https://speedtest.stockholm.linode.com/empty.php"
+        },
+        {
+          "name": "Seattle (US-SEA)",
+          "url": "https://speedtest.seattle.linode.com/empty.php"
+        },
+        {
+          "name": "Milan (IT-MIL)",
+          "url": "https://speedtest.milan.linode.com/empty.php"
+        },
+        {
+          "name": "Osaka (JP-OSA)",
+          "url": "https://speedtest.osaka.linode.com/empty.php"
+        },
+        {
+          "name": "Chennai (IN-MAA)",
+          "url": "https://speedtest.chennai.linode.com/empty.php"
+        },
+        {
+          "name": "Jakarta (ID-CGK)",
+          "url": "https://speedtest.jakarta.linode.com/empty.php"
+        },
+        {
+          "name": "Sao Paulo (BR-GRU)",
+          "url": "https://speedtest.sao-paulo.linode.com/empty.php"
+        },
+        {
+          "name": "Amsterdam (NL-AMS)",
+          "url": "https://speedtest.amsterdam.linode.com/empty.php"
+        },
+        {
+          "name": "Miami (US-MIA)",
+          "url": "https://speedtest.miami.linode.com/empty.php"
+        },
+        {
+          "name": "Los Angeles (US-LAX)",
+          "url": "https://speedtest.los-angeles.linode.com/empty.php"
+        },
+        {
+          "name": "Madrid (ES-MAD)",
+          "url": "https://speedtest.madrid.linode.com/empty.php"
+        }
+      ]
+    },
+    "OVH Cloud": {
+      "regions": [
+        {
+          "name": "Roubaix (France)",
+          "url": "https://fr-ovh-roubaix-02-10g.nperf.net/"
+        },
+        {
+          "name": "Strasbourg (France)",
+          "url": "https://fr-ovh-strasbourg-02-10g.nperf.net/"
+        },
+        {
+          "name": "Beauharnois (Canada)",
+          "url": "https://ca-ovh-beauharnois-02-10g.nperf.net/"
+        },
+        {
+          "name": "Gravelines (France)",
+          "url": "https://fr-ovh-gravelines-02-10g.nperf.net/"
+        },
+        {
+          "name": "Erith (United Kingdom)",
+          "url": "https://gb-ovh-erith-01-10g.nperf.net/"
+        },
+        {
+          "name": "Limburg (Germany)",
+          "url": "https://de-ovh-limburg-01-10g.nperf.net/"
+        },
+        {
+          "name": "Warsaw (Poland)",
+          "url": "https://pl-ovh-warsaw-01-10g.nperf.net/"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://sg-ovh-singapore-01-10g.nperf.net/"
+        },
+        {
+          "name": "Hillsboro (United States)",
+          "url": "https://us-ovh-hillsboro-01-10g.nperf.net/"
+        },
+        {
+          "name": "Vint Hill (United States)",
+          "url": "https://us-ovh-vinthill-01-10g.nperf.net/"
+        },
+        {
+          "name": "Mumbai (India)",
+          "url": "https://in-ovh-mumbai-01-10g-1.nperf.net/"
+        }
+      ]
+    },
+    "Scaleway": {
+      "regions": [
+        {
+          "name": "PAR (France)",
+          "url": "https://s3.fr-par.scw.cloud/"
+        },
+        {
+          "name": "AMS (Netherlands)",
+          "url": "https://s3.nl-ams.scw.cloud/"
+        },
+        {
+          "name": "WAW (Poland)",
+          "url": "https://s3.pl-waw.scw.cloud/"
+        }
+      ]
+    },
+    "servers.com": {
+      "regions": [
+        {
+          "name": "DFW1 (Dallas–Fort Worth, TX, USA)",
+          "url": "https://test.dfw1.servers.com/"
+        },
+        {
+          "name": "DFW2 (Dallas–Fort Worth, TX, USA)",
+          "url": "https://test.dfw2.servers.com/"
+        },
+        {
+          "name": "DFW3 (Dallas–Fort Worth, TX, USA)",
+          "url": "https://test.dfw3.servers.com/"
+        },
+        {
+          "name": "SJC1 (San Francisco Bay Area, CA, USA)",
+          "url": "https://test.sjc1.servers.com/"
+        },
+        {
+          "name": "WAS1 (Washington D.C., VA, USA)",
+          "url": "https://test.was1.servers.com/"
+        },
+        {
+          "name": "WAS2 (Washington D.C., VA, USA)",
+          "url": "https://test.was2.servers.com/"
+        },
+        {
+          "name": "HKG1 (Hong Kong, Hong Kong)",
+          "url": "https://test.hkg1.servers.com/"
+        },
+        {
+          "name": "SIN1 (Singapore, Singapore)",
+          "url": "https://test.sg01.servers.com/"
+        },
+        {
+          "name": "AMS1 (Amsterdam, Netherlands)",
+          "url": "https://test.ams1.servers.com/"
+        },
+        {
+          "name": "AMS2 (Amsterdam, Netherlands)",
+          "url": "https://test.ams2.servers.com/"
+        },
+        {
+          "name": "AMS3 (Amsterdam, Netherlands)",
+          "url": "https://test.ams3.servers.com/"
+        },
+        {
+          "name": "AMS4 (Amsterdam, Netherlands)",
+          "url": "https://test.ams4.servers.com/"
+        },
+        {
+          "name": "AMS5 (Amsterdam, Netherlands)",
+          "url": "https://test.ams5.servers.com/"
+        },
+        {
+          "name": "LON1 (London, United Kingdom)",
+          "url": "https://test.lon1.servers.com/"
+        },
+        {
+          "name": "LUX1 (Luxembourg, Luxembourg)",
+          "url": "https://test.lux1.servers.com/"
+        },
+        {
+          "name": "LUX2 (Luxembourg, Luxembourg)",
+          "url": "https://test.lux2.servers.com/"
+        }
+      ]
+    },
+    "Vultr": {
+      "regions": [
+        {
+          "name": "Johannesburg (Africa)",
+          "url": "https://jnb-za-ping.vultr.com/ping"
+        },
+        {
+          "name": "Bangalore (India)",
+          "url": "https://blr-in-ping.vultr.com/ping"
+        },
+        {
+          "name": "Delhi NCR (India)",
+          "url": "https://del-in-ping.vultr.com/ping"
+        },
+        {
+          "name": "Mumbai (India)",
+          "url": "https://bom-in-ping.vultr.com/ping"
+        },
+        {
+          "name": "Osaka (Japan)",
+          "url": "https://osk-jp-ping.vultr.com/ping"
+        },
+        {
+          "name": "Seoul (South Korea)",
+          "url": "https://sel-kor-ping.vultr.com/ping"
+        },
+        {
+          "name": "Singapore (Singapore)",
+          "url": "https://sgp-ping.vultr.com/ping"
+        },
+        {
+          "name": "Tel Aviv (Israel)",
+          "url": "https://tlv-il-ping.vultr.com/ping"
+        },
+        {
+          "name": "Tokyo (Japan)",
+          "url": "https://hnd-jp-ping.vultr.com/ping"
+        },
+        {
+          "name": "Melbourne (Australia)",
+          "url": "https://mel-au-ping.vultr.com/ping"
+        },
+        {
+          "name": "Sydney (Australia)",
+          "url": "https://syd-au-ping.vultr.com/ping"
+        },
+        {
+          "name": "Amsterdam (Netherlands)",
+          "url": "https://ams-nl-ping.vultr.com/ping"
+        },
+        {
+          "name": "Frankfurt (Germany)",
+          "url": "https://fra-de-ping.vultr.com/ping"
+        },
+        {
+          "name": "London (United Kingdom)",
+          "url": "https://lon-gb-ping.vultr.com/ping"
+        },
+        {
+          "name": "Madrid (Spain)",
+          "url": "https://mad-es-ping.vultr.com/ping"
+        },
+        {
+          "name": "Manchester (United Kingdom)",
+          "url": "https://man-uk-ping.vultr.com/ping"
+        },
+        {
+          "name": "Paris (France)",
+          "url": "https://par-fr-ping.vultr.com/ping"
+        },
+        {
+          "name": "Stockholm (Sweden)",
+          "url": "https://sto-se-ping.vultr.com/ping"
+        },
+        {
+          "name": "Warsaw (Poland)",
+          "url": "https://waw-pl-ping.vultr.com/ping"
+        },
+        {
+          "name": "Atlanta (United States)",
+          "url": "https://ga-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Chicago (United States)",
+          "url": "https://il-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Dallas (United States)",
+          "url": "https://tx-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Honolulu (United States)",
+          "url": "https://hon-hi-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Los Angeles (United States)",
+          "url": "https://lax-ca-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Mexico City (Mexico)",
+          "url": "https://mex-mx-ping.vultr.com/ping"
+        },
+        {
+          "name": "Miami (United States)",
+          "url": "https://fl-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "New Jersey (United States)",
+          "url": "https://nj-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Seattle (United States)",
+          "url": "https://wa-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Silicon Valley (United States)",
+          "url": "https://sjo-ca-us-ping.vultr.com/ping"
+        },
+        {
+          "name": "Toronto (Canada)",
+          "url": "https://tor-ca-ping.vultr.com/ping"
+        },
+        {
+          "name": "Santiago (Chile)",
+          "url": "https://scl-cl-ping.vultr.com/ping"
+        },
+        {
+          "name": "São Paulo (Brazil)",
+          "url": "https://sao-br-ping.vultr.com/ping"
+        }
+      ]
+    }
+  }
+}

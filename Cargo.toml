@@ -1,0 +1,114 @@
+[package]
+name = "cloud-ping"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["Pratyay Mustafi"]
+description = "A comprehensive network performance testing utility with multi-threaded concurrent testing"
+license = "MIT"
+repository = "https://github.com/Pratyay360/cloud-ping"
+keywords = ["network", "ping", "benchmark", "performance", "cloud"]
+categories = ["command-line-utilities", "network-programming"]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+nursery = "warn"
+cargo = "warn"
+# Allow some pedantic lints that are too strict
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+
+[[bin]]
+name = "cloud-ping"
+path = "src/main.rs"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.40", features = ["full"] }
+
+# HTTP client
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# CLI
+clap = { version = "4.5", features = ["derive", "env", "color"] }
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Async utilities
+futures = "0.3"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Terminal UI
+colored = "2.1"
+indicatif = "0.17"
+console = "0.15"
+
+# Configuration
+config = "0.14"
+dirs = "5.0"
+
+# Metrics and observability
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Performance
+dashmap = "6.1"
+
+# Utilities
+uuid = { version = "1.11", features = ["v4", "fast-rng"] }
+url = "2.5"
+toml = "0.8"
+rand = "0.8"
+ipnet = "2.5"
+bytesize = "1.3"  # For human-readable byte formatting
+num-format = "0.4"  # For number formatting with separators
+
+# High priority additions from FUTURE_IMPROVEMENTS.md
+tabled = "0.15"              # Table formatting
+serde_path_to_error = "0.1"  # Better JSON errors
+humantime = "2.1"            # Duration parsing (already used in some places)
+humantime-serde = "1.1"     # Serde support for humantime
+
+# Medium priority additions
+statistical = "1.0"          # Statistics functions
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = { version = "0.5", features = ["html_reports"] }
+tempfile = "3.8"
+wiremock = "0.5"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = 3
+
+[profile.dev]
+debug = true
+opt-level = 0
+
+# Fast compile profile for development
+[profile.dev.package."*"]
+opt-level = 2
+
+# Profile for benchmarking
+[profile.bench]
+inherits = "release"
+debug = true
+strip = false

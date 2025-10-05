@@ -1,0 +1,26 @@
+# Cargo configuration for better build performance and defaults
+
+[build]
+# Use all available CPU cores for parallel compilation
+jobs = -1
+
+[target.x86_64-unknown-linux-gnu]
+# Use mold linker for faster linking on Linux (if available)
+# linker = "clang"
+# rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[profile.dev]
+# Faster incremental compilation
+incremental = true
+
+[profile.release]
+# Enable link-time optimization for better performance
+lto = "fat"
+
+[alias]
+# Useful cargo aliases
+check-all = "check --all-targets --all-features"
+test-all = "test --all-targets --all-features"
+clippy-all = "clippy --all-targets --all-features -- -D warnings"
+fmt-check = "fmt --all -- --check"
+build-release = "build --release --all-features"

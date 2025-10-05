@@ -11,7 +11,6 @@ Cloud Ping RS is a comprehensive network performance testing tool designed for d
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [What's New in v3.0](#-whats-new-in-v30)
 - [Quick Start](#-quick-start)
 - [Installation](#-installation)
 - [Usage Guide](#-usage-guide)
@@ -26,7 +25,6 @@ Cloud Ping RS is a comprehensive network performance testing tool designed for d
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## 🆕 What's New in v3.0
 
 ### Planned Network Monitoring System
 
@@ -153,24 +151,24 @@ Version 3.0 plans to introduce a complete **asynchronous network monitoring syst
 
 ```bash
 # Clone the repository
-git clone https://github.com/example/cloud-ping-rs
-cd cloud-ping-rs
+git clone https://github.com/example/cloud-ping
+cd cloud-ping
 
 # Build the release version (optimized)
 cargo build --release
 
-# The binary will be at target/release/cloud-ping-rs
-./target/release/cloud-ping-rs --version
+# The binary will be at target/release/cloud-ping
+./target/release/cloud-ping --version
 ```
 
 #### Using Cargo Install
 
 ```bash
 # Install directly from crates.io (when published)
-cargo install cloud-ping-rs
+cargo install cloud-ping
 
 # Or install from git repository
-cargo install --git https://github.com/example/cloud-ping-rs
+cargo install --git https://github.com/example/cloud-ping
 ```
 
 #### Quick Build Script
@@ -185,35 +183,35 @@ chmod +x run.sh
 
 ```bash
 # Run basic network benchmark (tests all regions with 10 pings each)
-cloud-ping-rs
+cloud-ping
 
 # Run with verbose logging
-cloud-ping-rs --verbose
+cloud-ping --verbose
 ```
 
 Planned commands (not yet implemented):
 
 ```bash
 # Comprehensive benchmark of all regions (default: 10 pings each)
-cloud-ping-rs benchmark
+cloud-ping benchmark
 
 # Quick test (3 pings per region, faster results)
-cloud-ping-rs quick
+cloud-ping quick
 
 # Test a specific URL
-cloud-ping-rs test https://example.com
+cloud-ping test https://example.com
 
 # List all available regions and providers
-cloud-ping-rs list
+cloud-ping list
 
 # Validate configuration and data files
-cloud-ping-rs validate
+cloud-ping validate
 
 # Show current configuration
-cloud-ping-rs config --show
+cloud-ping config --show
 
 # Display help and all available commands
-cloud-ping-rs --help
+cloud-ping --help
 ```
 
 ### First Run Example
@@ -240,10 +238,10 @@ The current implementation runs a basic benchmark test across all available regi
 
 ```bash
 # Run basic network benchmark (tests all regions with 10 pings each)
-cloud-ping-rs
+cloud-ping
 
 # Run with verbose logging
-cloud-ping-rs --verbose
+cloud-ping --verbose
 ```
 
 The application will:
@@ -271,29 +269,29 @@ Full-featured testing with detailed metrics and analysis.
 
 ```bash
 # Test all regions with default settings (10 pings each)
-cloud-ping-rs benchmark
+cloud-ping benchmark
 
 # Custom ping count and save results
-cloud-ping-rs benchmark --count 20 --save --output results.json
+cloud-ping benchmark --count 20 --save --output results.json
 
 # Filter by provider (supports partial matching)
-cloud-ping-rs benchmark --provider "Amazon Web Services"
-cloud-ping-rs benchmark --provider "AWS"
+cloud-ping benchmark --provider "Amazon Web Services"
+cloud-ping benchmark --provider "AWS"
 
 # Filter by region name or code
-cloud-ping-rs benchmark --region "us-east"
-cloud-ping-rs benchmark --region "virginia"
+cloud-ping benchmark --region "us-east"
+cloud-ping benchmark --region "virginia"
 
 # Combine filters
-cloud-ping-rs benchmark --provider "Google" --region "us" --count 15
+cloud-ping benchmark --provider "Google" --region "us" --count 15
 
 # Custom timeout and threads
-cloud-ping-rs benchmark --timeout 5000 --max-threads 16
+cloud-ping benchmark --timeout 5000 --max-threads 16
 
 # Different output formats
-cloud-ping-rs benchmark --format json --output results.json
-cloud-ping-rs benchmark --format csv --output results.csv
-cloud-ping-rs benchmark --format table  # Pretty terminal output
+cloud-ping benchmark --format json --output results.json
+cloud-ping benchmark --format csv --output results.csv
+cloud-ping benchmark --format table  # Pretty terminal output
 ```
 
 #### Planned `quick` Command
@@ -302,20 +300,20 @@ Optimized for speed with fewer pings (default: 3 per region).
 
 ```bash
 # Quick test with default settings
-cloud-ping-rs quick
+cloud-ping quick
 
 # Custom ping count (still faster than benchmark)
-cloud-ping-rs quick --count 5
+cloud-ping quick --count 5
 
 # Filter by provider
-cloud-ping-rs quick --provider "Google Cloud"
-cloud-ping-rs quick --provider "Azure"
+cloud-ping quick --provider "Google Cloud"
+cloud-ping quick --provider "Azure"
 
 # Quick test with verbose output
-cloud-ping-rs quick --verbose
+cloud-ping quick --verbose
 
 # Save quick test results
-cloud-ping-rs quick --save --output quick-results.json
+cloud-ping quick --save --output quick-results.json
 ```
 
 #### Planned `test` Command
@@ -324,21 +322,21 @@ Test any HTTP/HTTPS endpoint, not just predefined regions.
 
 ```bash
 # Test specific URL
-cloud-ping-rs test https://example.com
+cloud-ping test https://example.com
 
 # Custom ping count with detailed output
-cloud-ping-rs test https://example.com --count 15 --detailed
+cloud-ping test https://example.com --count 15 --detailed
 
 # Test with custom timeout
-cloud-ping-rs test https://api.github.com --timeout 3000
+cloud-ping test https://api.github.com --timeout 3000
 
 # Test and save results
-cloud-ping-rs test https://example.com --save --output single-test.json
+cloud-ping test https://example.com --save --output single-test.json
 
 # Test multiple URLs (run command multiple times)
-cloud-ping-rs test https://example.com
-cloud-ping-rs test https://google.com
-cloud-ping-rs test https://cloudflare.com
+cloud-ping test https://example.com
+cloud-ping test https://google.com
+cloud-ping test https://cloudflare.com
 ```
 
 #### Planned `list` Command
@@ -347,24 +345,24 @@ Discover and manage available regions and providers.
 
 ```bash
 # List all regions with details
-cloud-ping-rs list
+cloud-ping list
 
 # Filter by provider
-cloud-ping-rs list --provider "Microsoft Azure"
-cloud-ping-rs list --provider "AWS"
+cloud-ping list --provider "Microsoft Azure"
+cloud-ping list --provider "AWS"
 
 # Show only enabled regions
-cloud-ping-rs list --enabled-only
+cloud-ping list --enabled-only
 
 # Show only disabled regions
-cloud-ping-rs list --disabled-only
+cloud-ping list --disabled-only
 
 # List with detailed metadata
-cloud-ping-rs list --detailed
+cloud-ping list --detailed
 
 # Export region list
-cloud-ping-rs list --format json --output regions.json
-cloud-ping-rs list --format csv --output regions.csv
+cloud-ping list --format json --output regions.json
+cloud-ping list --format csv --output regions.csv
 ```
 
 #### Planned `validate` Command
@@ -373,19 +371,19 @@ Verify configuration files and data integrity.
 
 ```bash
 # Validate default configuration and data files
-cloud-ping-rs validate
+cloud-ping validate
 
 # Validate specific data file
-cloud-ping-rs validate --data-file custom_data.json
+cloud-ping validate --data-file custom_data.json
 
 # Validate configuration file
-cloud-ping-rs validate --config-file ~/.config/cloud-ping-rs/config.toml
+cloud-ping validate --config-file ~/.config/cloud-ping/config.toml
 
 # Validate with verbose output (shows all checks)
-cloud-ping-rs validate --verbose
+cloud-ping validate --verbose
 
 # Validate and fix common issues
-cloud-ping-rs validate --fix
+cloud-ping validate --fix
 ```
 
 #### Planned `config` Command
@@ -394,19 +392,19 @@ Manage application configuration.
 
 ```bash
 # Show current configuration (from all sources)
-cloud-ping-rs config --show
+cloud-ping config --show
 
 # Generate default configuration file
-cloud-ping-rs config --output config.toml
+cloud-ping config --output config.toml
 
 # Generate configuration at specific location
-cloud-ping-rs config --output ~/.config/cloud-ping-rs/config.toml
+cloud-ping config --output ~/.config/cloud-ping/config.toml
 
 # Show configuration with sources (env vars, file, defaults)
-cloud-ping-rs config --show --verbose
+cloud-ping config --show --verbose
 
 # Validate configuration
-cloud-ping-rs config --validate
+cloud-ping config --validate
 ```
 
 ### Global Options
@@ -415,37 +413,37 @@ These options are planned for future implementation:
 
 ```bash
 # Enable verbose logging (shows detailed progress)
-cloud-ping-rs --verbose benchmark
+cloud-ping --verbose benchmark
 
 # Set output format (json, csv, table)
-cloud-ping-rs --format csv benchmark
-cloud-ping-rs --format json quick
+cloud-ping --format csv benchmark
+cloud-ping --format json quick
 
 # Custom thread count (default: 8)
-cloud-ping-rs --max-threads 16 benchmark
-cloud-ping-rs --max-threads 4 quick  # Lower for resource-constrained systems
+cloud-ping --max-threads 16 benchmark
+cloud-ping --max-threads 4 quick  # Lower for resource-constrained systems
 
 # Custom timeout in milliseconds (default: 5000)
-cloud-ping-rs --timeout 3000 benchmark
-cloud-ping-rs --timeout 10000 test https://slow-endpoint.com
+cloud-ping --timeout 3000 benchmark
+cloud-ping --timeout 10000 test https://slow-endpoint.com
 
 # Disable colored output (useful for logs)
-cloud-ping-rs --no-color benchmark
+cloud-ping --no-color benchmark
 
 # Disable progress bars (useful for CI/CD)
-cloud-ping-rs --no-progress benchmark
+cloud-ping --no-progress benchmark
 
 # Custom data file
-cloud-ping-rs --data-file custom-regions.json benchmark
+cloud-ping --data-file custom-regions.json benchmark
 
 # Combine multiple options
-cloud-ping-rs --verbose --format json --max-threads 16 --timeout 3000 benchmark
+cloud-ping --verbose --format json --max-threads 16 --timeout 3000 benchmark
 ```
 
 Current supported options:
 ```bash
 # Enable verbose logging
-cloud-ping-rs --verbose
+cloud-ping --verbose
 ```
 
 ### Advanced Usage Examples
@@ -454,10 +452,10 @@ cloud-ping-rs --verbose
 
 ```bash
 # Fast, non-interactive test for CI/CD (planned feature)
-cloud-ping-rs quick --no-color --no-progress --format json --output ci-results.json
+cloud-ping quick --no-color --no-progress --format json --output ci-results.json
 
 # Exit code indicates success/failure
-if cloud-ping-rs quick --no-progress; then
+if cloud-ping quick --no-progress; then
     echo "Network tests passed"
 else
     echo "Network tests failed"
@@ -482,7 +480,7 @@ cargo run -- --verbose
 
 while true; do
     timestamp=$(date +%Y%m%d_%H%M%S)
-    cloud-ping-rs benchmark \
+    cloud-ping benchmark \
         --format json \
         --output "results_${timestamp}.json" \
         --no-progress
@@ -512,7 +510,7 @@ cat > my-endpoints.json << EOF
 EOF
 
 # Test custom endpoints
-cloud-ping-rs --data-file my-endpoints.json benchmark
+cloud-ping --data-file my-endpoints.json benchmark
 ```
 
 For now, you can customize the endpoints by modifying the `data.json` file directly.
@@ -534,9 +532,9 @@ Default configuration file paths by platform:
 
 | Platform | Path |
 |----------|------|
-| Linux | `~/.config/cloud-ping-rs/config.toml` |
-| macOS | `~/.config/cloud-ping-rs/config.toml` |
-| Windows | `%APPDATA%\cloud-ping-rs\config.toml` |
+| Linux | `~/.config/cloud-ping/config.toml` |
+| macOS | `~/.config/cloud-ping/config.toml` |
+| Windows | `%APPDATA%\cloud-ping\config.toml` |
 
 ### Complete Configuration Example
 
@@ -565,7 +563,7 @@ verbose = false                # Enable verbose logging
 
 # HTTP Settings
 # -------------
-user_agent = "cloud-ping-rs/3.0.0"  # HTTP User-Agent header
+user_agent = "cloud-ping/3.0.0"  # HTTP User-Agent header
 validate_certificates = false       # Validate SSL/TLS certificates
 connection_timeout_ms = 3000        # Connection timeout
 read_timeout_ms = 5000              # Read timeout
@@ -684,13 +682,13 @@ Validate your configuration before running tests:
 
 ```bash
 # Validate configuration file
-cloud-ping-rs config --validate
+cloud-ping config --validate
 
 # Show current configuration with sources
-cloud-ping-rs config --show --verbose
+cloud-ping config --show --verbose
 
 # Generate a new configuration file
-cloud-ping-rs config --output my-config.toml
+cloud-ping config --output my-config.toml
 ```
 
 ### Configuration Best Practices
@@ -893,19 +891,19 @@ Microsoft Azure,eastus (Virginia),azure-eastus,US,100.0,27.15,21.50,35.20,26.40,
 
 ```bash
 # Terminal output (default)
-cloud-ping-rs benchmark
+cloud-ping benchmark
 
 # JSON output to file
-cloud-ping-rs benchmark --format json --output results.json
+cloud-ping benchmark --format json --output results.json
 
 # CSV output to file
-cloud-ping-rs benchmark --format csv --output results.csv
+cloud-ping benchmark --format csv --output results.csv
 
 # JSON output to stdout (for piping)
-cloud-ping-rs benchmark --format json --no-progress
+cloud-ping benchmark --format json --no-progress
 
 # Combine with jq for filtering
-cloud-ping-rs benchmark --format json --no-progress | jq '.results[] | select(.scoring.overall_score > 90)'
+cloud-ping benchmark --format json --no-progress | jq '.results[] | select(.scoring.overall_score > 90)'
 ```
 
 ## 🏗️ Architecture
@@ -1179,8 +1177,8 @@ cargo install cargo-expand      # Expand macros for debugging
 
 ```bash
 # Clone the repository
-git clone https://github.com/example/cloud-ping-rs
-cd cloud-ping-rs
+git clone https://github.com/example/cloud-ping
+cd cloud-ping
 
 # Build in debug mode (faster compilation)
 cargo build
@@ -1316,13 +1314,13 @@ RUST_LOG=trace cargo run -- benchmark
 RUST_LOG=cloud_ping_rs::network=debug cargo run -- test https://example.com
 
 # Use rust-gdb or rust-lldb for debugging
-rust-gdb target/debug/cloud-ping-rs
+rust-gdb target/debug/cloud-ping
 ```
 
 ### Project Structure
 
 ```
-cloud-ping-rs/
+cloud-ping/
 ├── src/
 │   ├── main.rs                 # Entry point and CLI
 │   ├── lib.rs                  # Library exports
@@ -1488,7 +1486,7 @@ cargo clippy --all-targets --all-features -- -D warnings
 cargo build --release
 
 # 6. Test release binary
-./target/release/cloud-ping-rs quick
+./target/release/cloud-ping quick
 
 # 7. Create git tag
 git tag -a v3.0.0 -m "Release version 3.0.0"
@@ -1936,13 +1934,13 @@ Cloud Ping RS reads cloud provider and region data from JSON files. The default 
 
 ```bash
 # Test with custom data file
-cloud-ping-rs --data-file my-endpoints.json benchmark
+cloud-ping --data-file my-endpoints.json benchmark
 
 # Validate custom data file
-cloud-ping-rs validate --data-file my-endpoints.json
+cloud-ping validate --data-file my-endpoints.json
 
 # List regions from custom file
-cloud-ping-rs --data-file my-endpoints.json list
+cloud-ping --data-file my-endpoints.json list
 ```
 
 ### Data File Best Practices
@@ -1977,43 +1975,43 @@ Cloud Ping RS is designed for high performance with minimal resource usage:
 
 ```bash
 # Use more threads for faster testing (if you have the resources)
-cloud-ping-rs --max-threads 16 benchmark
+cloud-ping --max-threads 16 benchmark
 
 # Use fewer threads on resource-constrained systems
-cloud-ping-rs --max-threads 4 benchmark
+cloud-ping --max-threads 4 benchmark
 
 # Auto-detect optimal thread count (default: 8)
-cloud-ping-rs benchmark
+cloud-ping benchmark
 ```
 
 #### Reduce Timeout for Faster Results
 
 ```bash
 # Lower timeout for faster failure detection
-cloud-ping-rs --timeout 2000 benchmark
+cloud-ping --timeout 2000 benchmark
 
 # Higher timeout for slow networks
-cloud-ping-rs --timeout 10000 benchmark
+cloud-ping --timeout 10000 benchmark
 ```
 
 #### Use Quick Mode for Fast Checks
 
 ```bash
 # Quick mode uses only 3 pings per region
-cloud-ping-rs quick
+cloud-ping quick
 
 # Even faster with fewer threads
-cloud-ping-rs --max-threads 4 quick
+cloud-ping --max-threads 4 quick
 ```
 
 #### Disable Progress Bars in CI/CD
 
 ```bash
 # Disable progress bars for faster execution
-cloud-ping-rs --no-progress benchmark
+cloud-ping --no-progress benchmark
 
 # Combine with JSON output for parsing
-cloud-ping-rs --no-progress --format json benchmark > results.json
+cloud-ping --no-progress --format json benchmark > results.json
 ```
 
 ### Resource Usage
@@ -2069,7 +2067,7 @@ Error: Connection timeout after 5000ms for region us-east-1
 ```
 
 **Solutions:**
-1. Increase timeout: `cloud-ping-rs --timeout 10000 benchmark`
+1. Increase timeout: `cloud-ping --timeout 10000 benchmark`
 2. Check your internet connection
 3. Verify the endpoint URL is accessible
 4. Check if a firewall is blocking requests
@@ -2100,7 +2098,7 @@ Error: Too many open files (OS error 24)
 ```
 
 **Solutions:**
-1. Reduce thread count: `cloud-ping-rs --max-threads 4 benchmark`
+1. Reduce thread count: `cloud-ping --max-threads 4 benchmark`
 2. Increase system file descriptor limit:
 ```bash
 # Temporary (Linux/macOS)
@@ -2119,7 +2117,7 @@ echo "ulimit -n 4096" >> ~/.bashrc
 1. Test fewer regions at once
 2. Reduce thread count
 3. Use quick mode instead of benchmark
-4. Filter by provider: `cloud-ping-rs benchmark --provider "AWS"`
+4. Filter by provider: `cloud-ping benchmark --provider "AWS"`
 
 #### Issue: Slow performance
 
@@ -2127,9 +2125,9 @@ echo "ulimit -n 4096" >> ~/.bashrc
 - Tests take longer than expected
 
 **Solutions:**
-1. Increase thread count: `cloud-ping-rs --max-threads 16 benchmark`
-2. Reduce timeout: `cloud-ping-rs --timeout 3000 benchmark`
-3. Use quick mode: `cloud-ping-rs quick`
+1. Increase thread count: `cloud-ping --max-threads 16 benchmark`
+2. Reduce timeout: `cloud-ping --timeout 3000 benchmark`
+3. Use quick mode: `cloud-ping quick`
 4. Check your network connection speed
 
 #### Issue: "Invalid JSON" errors
@@ -2140,7 +2138,7 @@ Error: Failed to parse data file: invalid JSON at line 42
 ```
 
 **Solutions:**
-1. Validate JSON syntax: `cloud-ping-rs validate --data-file data.json`
+1. Validate JSON syntax: `cloud-ping validate --data-file data.json`
 2. Use a JSON validator (e.g., jsonlint.com)
 3. Check for trailing commas, missing quotes, etc.
 4. Ensure proper UTF-8 encoding
@@ -2154,7 +2152,7 @@ Error: No regions found in data file
 
 **Solutions:**
 1. Verify data file exists: `ls -la data.json`
-2. Check data file format: `cloud-ping-rs validate`
+2. Check data file format: `cloud-ping validate`
 3. Ensure regions are enabled: `"enabled": true`
 4. Check provider filter: Remove `--provider` flag
 
@@ -2164,25 +2162,25 @@ Enable verbose logging for detailed debugging:
 
 ```bash
 # Verbose output
-cloud-ping-rs --verbose benchmark
+cloud-ping --verbose benchmark
 
 # Trace-level logging (very detailed)
-RUST_LOG=trace cloud-ping-rs benchmark
+RUST_LOG=trace cloud-ping benchmark
 
 # Debug specific module
-RUST_LOG=cloud_ping_rs::network=debug cloud-ping-rs benchmark
+RUST_LOG=cloud_ping_rs::network=debug cloud-ping benchmark
 
 # Save logs to file
-cloud-ping-rs --verbose benchmark 2> debug.log
+cloud-ping --verbose benchmark 2> debug.log
 ```
 
 ### Getting Help
 
 If you encounter issues not covered here:
 
-1. **Check existing issues:** [GitHub Issues](https://github.com/example/cloud-ping-rs/issues)
+1. **Check existing issues:** [GitHub Issues](https://github.com/example/cloud-ping/issues)
 2. **Enable verbose mode:** Run with `--verbose` flag
-3. **Validate configuration:** Run `cloud-ping-rs validate`
+3. **Validate configuration:** Run `cloud-ping validate`
 4. **Check system requirements:** Rust 1.75+, internet connection
 5. **Create an issue:** Include verbose output and system information
 
@@ -2195,14 +2193,14 @@ When reporting issues, include:
 rustc --version
 
 # Cloud Ping RS version
-cloud-ping-rs --version
+cloud-ping --version
 
 # Operating system
 uname -a  # Linux/macOS
 systeminfo  # Windows
 
 # Configuration
-cloud-ping-rs config --show
+cloud-ping config --show
 ```
 
 ## 🤝 Contributing
@@ -2221,8 +2219,8 @@ We welcome contributions! Cloud Ping RS is an open-source project and we appreci
 
 1. **Fork the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/cloud-ping-rs
-cd cloud-ping-rs
+git clone https://github.com/YOUR_USERNAME/cloud-ping
+cd cloud-ping
 ```
 
 2. **Create a feature branch**
@@ -2466,9 +2464,8 @@ If you find Cloud Ping RS useful, please consider giving it a star on GitHub! �
 
 ## 📞 Contact & Support
 
-- **Issues:** [GitHub Issues](https://github.com/example/cloud-ping-rs/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/example/cloud-ping-rs/discussions)
-- **Email:** support@cloudping.example.com
+- **Issues:** [GitHub Issues](https://github.com/example/cloud-ping/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/example/cloud-ping/discussions)
 
 ---
 
@@ -2478,6 +2475,6 @@ If you find Cloud Ping RS useful, please consider giving it a star on GitHub! �
 
 Built with ❤️ using Rust
 
-[⬆ Back to Top](#cloud-ping-rs-)
+[⬆ Back to Top](#cloud-ping)
 
 </div>

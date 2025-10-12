@@ -1473,6 +1473,21 @@ cargo bloat --release --crates
 
 ### Release Process
 
+The project uses an automated GitHub Actions workflow to build and publish releases for multiple platforms.
+
+#### Automated Release
+
+When a version tag is pushed, the workflow automatically:
+1. Creates a GitHub release
+2. Builds binaries for multiple platforms:
+   - Linux x86_64 (GNU and MUSL)
+   - macOS x86_64 (Intel)
+   - macOS ARM64 (Apple Silicon)
+   - Windows x86_64
+3. Uploads binaries and SHA256 checksums to the release
+
+#### Creating a Release
+
 ```bash
 # 1. Update version in Cargo.toml
 # 2. Update CHANGELOG.md
@@ -1482,19 +1497,24 @@ cargo test --all-features
 # 4. Run Clippy
 cargo clippy --all-targets --all-features -- -D warnings
 
-# 5. Build release binary
+# 5. Build and test release binary locally
 cargo build --release
-
-# 6. Test release binary
 ./target/release/cloud-ping quick
 
-# 7. Create git tag
-git tag -a v3.0.0 -m "Release version 3.0.0"
-git push origin v3.0.0
+# 6. Commit changes
+git add Cargo.toml CHANGELOG.md
+git commit -m "Bump version to v1.0.1"
 
-# 8. Publish to crates.io (if applicable)
+# 7. Create and push git tag (triggers automated release workflow)
+git tag -a v1.0.1 -m "Release version 1.0.1"
+git push origin master
+git push origin v1.0.1
+
+# 8. Publish to crates.io (optional)
 cargo publish
 ```
+
+The GitHub Actions workflow (`.github/workflows/release.yml`) will automatically build binaries for all supported platforms and attach them to the release.
 
 ## 📈 Scoring Algorithm
 

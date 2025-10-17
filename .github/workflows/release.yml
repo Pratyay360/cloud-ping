@@ -3,88 +3,129 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*.*.*'
+
+permissions:
+  contents: write
 
 env:
   CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
 
 jobs:
-  create-release:
-    name: Create Release
-    runs-on: ubuntu-latest
-    outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
-    steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-  build-release:
-    name: Build Release
-    needs: create-release
-    runs-on: ${{ matrix.os }}
+  build:
+    name: Build - ${{ matrix.platform.target }}
+    runs-on: ${{ matrix.platform.os }}
     strategy:
+      fail-fast: false
       matrix:
-        include:
+        platform:
+          # Linux x86_64 GNU
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-linux-amd64
+            bin: cloud-ping
+            name: cloud-ping-linux-x86_64-gnu.tar.gz
+          # Linux x86_64 MUSL (static binary)
           - os: ubuntu-latest
             target: x86_64-unknown-linux-musl
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-linux-musl-amd64
+            bin: cloud-ping
+            name: cloud-ping-linux-x86_64-musl.tar.gz
+          # macOS x86_64
           - os: macos-latest
             target: x86_64-apple-darwin
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-macos-amd64
+            bin: cloud-ping
+            name: cloud-ping-macos-x86_64.tar.gz
+          # macOS ARM64
           - os: macos-latest
             target: aarch64-apple-darwin
-            artifact_name: cloud-ping-rs
-            asset_name: cloud-ping-rs-macos-arm64
+            bin: cloud-ping
+            name: cloud-ping-macos-aarch64.tar.gz
+          # Windows x86_64
           - os: windows-latest
             target: x86_64-pc-windows-msvc
-            artifact_name: cloud-ping-rs.exe
-            asset_name: cloud-ping-rs-windows-amd64.exe
+            bin: cloud-ping.exe
+            name: cloud-ping-windows-x86_64.zip
 
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: ${{ matrix.target }}
-      
-      - uses: Swatinem/rust-cache@v2
-      
-      - name: Build
-        run: cargo build --release --target ${{ matrix.target }}
-      
-      - name: Strip binary (Linux/macOS)
-        if: matrix.os != 'windows-latest'
-        run: strip target/${{ matrix.target }}/release/${{ matrix.artifact_name }}
-      
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: target/${{ matrix.target }}/release/${{ matrix.artifact_name }}
-          asset_name: ${{ matrix.asset_name }}
-          asset_content_type: application/octet-stream
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  publish-crate:
-    name: Publish to crates.io
-    needs: build-release
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform.target }}
+
+      - name: Install MUSL tools (Linux MUSL only)
+        if: matrix.platform.target == 'x86_64-unknown-linux-musl'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y musl-tools
+
+      - name: Setup cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.platform.target }}
+
+      - name: Build binary
+        run: cargo build --release --target ${{ matrix.platform.target }}
+
+      - name: Package binary (Unix)
+        if: matrix.platform.os != 'windows-latest'
+        run: |
+          cd target/${{ matrix.platform.target }}/release
+          tar czf ../../../${{ matrix.platform.name }} ${{ matrix.platform.bin }}
+          cd -
+
+      - name: Package binary (Windows)
+        if: matrix.platform.os == 'windows-latest'
+        shell: pwsh
+        run: |
+          cd target/${{ matrix.platform.target }}/release
+          Compress-Archive -Path ${{ matrix.platform.bin }} -DestinationPath ../../../${{ matrix.platform.name }}
+          cd -
+
+      - name: Generate SHA256 checksum
+        shell: bash
+        run: |
+          if [ "${{ matrix.platform.os }}" = "windows-latest" ]; then
+            certutil -hashfile ${{ matrix.platform.name }} SHA256 > ${{ matrix.platform.name }}.sha256
+          else
+            shasum -a 256 ${{ matrix.platform.name }} > ${{ matrix.platform.name }}.sha256
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.platform.target }}
+          path: |
+            ${{ matrix.platform.name }}
+            ${{ matrix.platform.name }}.sha256
+
+  release:
+    name: Create Release
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - run: cargo publish --token ${{ secrets.CARGO_TOKEN }}
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -R artifacts
+
+      - name: Prepare release assets
+        run: |
+          mkdir release-assets
+          find artifacts -type f -exec cp {} release-assets/ \;
+          ls -lh release-assets
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release-assets/*
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

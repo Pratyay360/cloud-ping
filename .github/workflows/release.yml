@@ -20,27 +20,22 @@ jobs:
       fail-fast: false
       matrix:
         platform:
-          # Linux x86_64 GNU
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             bin: cloud-ping
             name: cloud-ping-linux-x86_64-gnu.tar.gz
-          # Linux x86_64 MUSL (static binary)
           - os: ubuntu-latest
             target: x86_64-unknown-linux-musl
             bin: cloud-ping
             name: cloud-ping-linux-x86_64-musl.tar.gz
-          # macOS x86_64
           - os: macos-latest
             target: x86_64-apple-darwin
             bin: cloud-ping
             name: cloud-ping-macos-x86_64.tar.gz
-          # macOS ARM64
           - os: macos-latest
             target: aarch64-apple-darwin
             bin: cloud-ping
             name: cloud-ping-macos-aarch64.tar.gz
-          # Windows x86_64
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             bin: cloud-ping.exe
@@ -55,7 +50,7 @@ jobs:
         with:
           targets: ${{ matrix.platform.target }}
 
-      - name: Install MUSL tools (Linux MUSL only)
+      - name: Install MUSL tools
         if: matrix.platform.target == 'x86_64-unknown-linux-musl'
         run: |
           sudo apt-get update
@@ -70,30 +65,24 @@ jobs:
         run: cargo build --release --target ${{ matrix.platform.target }}
 
       - name: Package binary (Unix)
-        if: matrix.platform.os != 'windows-latest'
+        if: runner.os != 'Windows'
         run: |
           cd target/${{ matrix.platform.target }}/release
           tar czf ../../../${{ matrix.platform.name }} ${{ matrix.platform.bin }}
           cd -
 
       - name: Package binary (Windows)
-        if: matrix.platform.os == 'windows-latest'
-        shell: pwsh
+        if: runner.os == 'Windows'
         run: |
           cd target/${{ matrix.platform.target }}/release
           Compress-Archive -Path ${{ matrix.platform.bin }} -DestinationPath ../../../${{ matrix.platform.name }}
           cd -
 
       - name: Generate SHA256 checksum
-        shell: bash
         run: |
-          if [ "${{ matrix.platform.os }}" = "windows-latest" ]; then
-            certutil -hashfile ${{ matrix.platform.name }} SHA256 > ${{ matrix.platform.name }}.sha256
-          else
-            shasum -a 256 ${{ matrix.platform.name }} > ${{ matrix.platform.name }}.sha256
-          fi
+          sha256sum ${{ matrix.platform.name }} > ${{ matrix.platform.name }}.sha256
 
-      - name: Upload artifacts
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.platform.target }}
@@ -111,13 +100,10 @@ jobs:
         with:
           path: artifacts
 
-      - name: Display structure of downloaded files
-        run: ls -R artifacts
-
       - name: Prepare release assets
         run: |
           mkdir release-assets
-          find artifacts -type f -exec cp {} release-assets/ \;
+          find artifacts -type f \( -name "*.tar.gz" -o -name "*.zip" -o -name "*.sha256" \) -exec cp {} release-assets/ \;
           ls -lh release-assets
 
       - name: Create Release

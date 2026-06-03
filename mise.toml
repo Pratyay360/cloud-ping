@@ -1,0 +1,12 @@
+[tools]
+rust = "latest"
+cargo-make = "latest"
+cargo-dist = "latest"
+cargo-insta = "latest"
+just = "latest"
+
+[tasks]
+install = { run = "cargo install --locked" }
+check = { run = "cargo check --all-targets --all-features" }
+build = { run = "cargo build --all-targets --all-features" }
+update = { run = "cargo update" }

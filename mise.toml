@@ -4,6 +4,7 @@ cargo-make = "latest"
 cargo-dist = "latest"
 cargo-insta = "latest"
 just = "latest"
+"aqua:rustsec/rustsec/cargo-audit" = "latest"
 
 [tasks]
 install = { run = "cargo install --locked" }

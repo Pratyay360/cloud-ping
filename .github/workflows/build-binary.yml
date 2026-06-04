@@ -1,0 +1,40 @@
+name: Build Binary
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+jobs:
+  build:
+    name: Build Linux binary
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup mise
+        uses: jdx/mise-action@v2
+        with:
+          install: true
+
+      - name: Build release binary
+        run: cargo build --release --locked --bin cloud-ping
+
+      - name: Package binary
+        run: |
+          mkdir -p dist
+          tar -C target/release -czf dist/cloud-ping-linux-x86_64.tar.gz cloud-ping
+          sha256sum dist/cloud-ping-linux-x86_64.tar.gz > dist/cloud-ping-linux-x86_64.tar.gz.sha256
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloud-ping-linux-x86_64
+          path: dist/*
+          if-no-files-found: error
